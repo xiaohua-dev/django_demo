@@ -14,5 +14,5 @@ class BookInfo(models.Model):
 class HeroInfo(models.Model):
     hname = models.CharField(max_length=20)
     hgender = models.BooleanField(default=False)
-    hgender = models.CharField(max_length=248)
+    hcommnet = models.CharField(max_length=248)
     hbook = models.ForeignKey('BookInfo')#两表之间建立关系

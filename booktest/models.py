@@ -9,6 +9,9 @@ class BookInfo(models.Model):
     btile = models.CharField(max_length=30)
     bpub_data = models.DateField()
 
+    def __str__(self):
+        return  self.btile
+
 
 #多类
 class HeroInfo(models.Model):

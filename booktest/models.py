@@ -10,6 +10,7 @@ class BookInfo(models.Model):
     bpub_data = models.DateField()
 
     def __str__(self):
+        #返回书名
         return  self.btile
 
 
@@ -19,3 +20,6 @@ class HeroInfo(models.Model):
     hgender = models.BooleanField(default=False)
     hcommnet = models.CharField(max_length=128)
     hbook = models.ForeignKey('BookInfo', on_delete=models.CASCADE)#两表之间建立关系
+
+    def __str__(self):
+        return  self.hname

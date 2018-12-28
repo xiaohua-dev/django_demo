@@ -6,5 +6,5 @@ from . import view
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'hello/', view.hello),
-    url(r'^', include('booktest.urls')), #模块url
+    url(r'^', include('booktest.urls')), #包括模块url
 ]

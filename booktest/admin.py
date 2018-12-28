@@ -8,5 +8,8 @@ from booktest.models import BookInfo,HeroInfo
 class BookInfoAdmin(admin.ModelAdmin):
     list_display = ['id', 'btile', 'bpub_data']
 
+class HeroInfoAdmin(admin.ModelAdmin):
+    list_display = ['hname', 'hgender', 'hcommnet', 'hbook']
+
 admin.site.register(BookInfo, BookInfoAdmin)
-admin.site.register(HeroInfo)
+admin.site.register(HeroInfo, HeroInfoAdmin)

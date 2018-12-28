@@ -5,5 +5,8 @@ from booktest.models import BookInfo,HeroInfo
 # Register your models here.
 #注册类模型
 
-admin.site.register(BookInfo)
+class BookInfoAdmin(admin.ModelAdmin):
+    list_display = ['id', 'btitle', 'bpub_date']
+
+admin.site.register(BookInfo, BookInfoAdmin)
 admin.site.register(HeroInfo)

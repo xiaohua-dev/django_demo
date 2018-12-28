@@ -1,4 +1,8 @@
 from django.contrib import admin
-from BookInfo import models
+#后台管理
+from booktest.models import BookInfo
 
 # Register your models here.
+#注册类模型
+
+admin.site.register(BookInfo)

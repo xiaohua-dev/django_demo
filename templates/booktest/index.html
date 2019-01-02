@@ -7,6 +7,14 @@
 <body>
     <h1>这是一个模板文件</h1>
     使用的模板变量：<br/>
-    {{ content }}
+    {{ content }} <br/>
+    使用列表 <br/>
+    {{ list }} <br/>
+    for循环：<br/>
+    <ul>
+        {% for i in list %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

@@ -25,7 +25,7 @@ def index(request):
     # return HttpResponse(res_html)
 
     # 以上四步实际上就是调用render的函数，等于下方式
-    return render(request, 'booktest/index.html', {'content': 'hello xiaopeng'})
+    return render(request, 'booktest/index.html', {'content': 'hello xiaopeng', 'list': list(range(1,10))})
 
 def index2(request):
     return HttpResponse("hello world")

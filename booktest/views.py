@@ -11,19 +11,21 @@ def index(request):
     #进行处理，和M和T进行交互
     #return HttpResponse("booktest app")
 
-    # 如何使用模板文件
-    # 1.加载模板文件，模板对象
-    temp = loader.get_template('booktest/index.html')
+    # # 如何使用模板文件
+    # # 1.加载模板文件，模板对象
+    # temp = loader.get_template('booktest/index.html')
+    #
+    # # 2、定义模板上下文：给模板文件传递数据；以字典的方式
+    # context = RequestContext(request, {})
+    #
+    # # 3、模板渲染：产生标准的html内容
+    # res_html = temp.render(context)
+    #
+    # # 4、返回给浏览器
+    # return HttpResponse(res_html)
 
-    # 2、定义模板上下文：给模板文件传递数据；以字典的方式
-    context = RequestContext(request, {})
-
-    # 3、模板渲染：产生标准的html内容
-    res_html = temp.render(context)
-    
-    # 4、返回给浏览器
-    return HttpResponse(res_html)
-
+    # 以上四步实际上就是调用render的函数，等于下方式
+    return render(request, 'booktest/index.html')
 
 def index2(request):
     return HttpResponse("hello world")

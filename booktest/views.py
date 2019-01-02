@@ -16,10 +16,12 @@ def index(request):
     temp = loader.get_template('booktest/index.html')
     # 2、定义模板上下文：给模板文件传递数据；以字典的方式
     context = RequestContext(request, {})
+
     # 3、模板渲染：产生标准的html内容
-    res_html = render(context,temp)
+    res_html = render(context, temp)
     # 4、返回给浏览器
     return HttpResponse(res_html)
+
 
 def index2(request):
     return HttpResponse("hello world")

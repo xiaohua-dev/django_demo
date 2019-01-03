@@ -5,5 +5,4 @@ import os
 
 def hello(request):
     command_status = os.popen('ifconfig eth0').read()
-    result = command_status.decode
-    return HttpResponse("%s" %(result))
+    return HttpResponse("%s" %(command_status))
